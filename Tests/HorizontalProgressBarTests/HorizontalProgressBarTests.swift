@@ -84,9 +84,9 @@ final class HorizontalProgressBarTests: XCTestCase {
     
     func test_if_not_ascending_should_decrease_bar_value() {
         let sut = makeSUT()
-        sut.factor = 10
+        sut.factor = 20
         sut.updateBarState()
-        XCTAssertEqual(sut.progressValue, 90)
+        XCTAssertEqual(sut.progressValue, 80)
     }
     
     func test_ascending_when_complete_progress_value_should_be_equal_as_max_value() {
