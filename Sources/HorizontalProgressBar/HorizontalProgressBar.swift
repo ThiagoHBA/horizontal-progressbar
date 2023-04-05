@@ -109,7 +109,7 @@ final public class HorizontalProgressBar: SKNode {
             await foregroundBar.run(
                 SKAction.resize(
                     toWidth: width,
-                    duration: 1.0
+                    duration: 0.2
                 )
             )
         }
