@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SpriteKit
 
-final class HorizontalProgressBar: SKNode {
+final public class HorizontalProgressBar: SKNode {
     private var maxProgressWidth: CGFloat!
     private var isAscending: Bool!
     private var size: CGSize!
