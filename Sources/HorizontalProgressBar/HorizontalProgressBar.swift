@@ -17,14 +17,14 @@ final public class HorizontalProgressBar: SKNode {
     private(set) var backBar: SKSpriteNode!
     private(set) var foregroundBar: SKSpriteNode!
     
-    var backTexture: SKTexture? {
+    public var backTexture: SKTexture? {
         didSet {
             backBar.removeFromParent()
             createProgressBar()
             positionateBar()
         }
     }
-    var foregroundTexture: SKTexture? {
+    public var foregroundTexture: SKTexture? {
         didSet {
             foregroundBar.removeFromParent()
             createProgressBar()
@@ -32,9 +32,9 @@ final public class HorizontalProgressBar: SKNode {
         }
     }
     
-    var padding: CGFloat = 10.0 { didSet { positionateBar() } }
-    var factor: CGFloat = CGFloat(10)
-    let maxProgressValue = CGFloat(100)
+    public var padding: CGFloat = 10.0 { didSet { positionateBar() } }
+    public var factor: CGFloat = CGFloat(10)
+    public let maxProgressValue = CGFloat(100)
     private(set) var progressValue = CGFloat(0)
     
     public init(isAscending: Bool = false, size: CGSize) {
