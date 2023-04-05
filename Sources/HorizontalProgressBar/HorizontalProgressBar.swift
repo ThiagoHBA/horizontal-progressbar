@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SpriteKit
 
-class HorizontalProgressBar: SKNode {
+final class HorizontalProgressBar: SKNode {
     private var maxProgressWidth: CGFloat!
     private var isAscending: Bool!
     private var size: CGSize!
@@ -37,7 +37,7 @@ class HorizontalProgressBar: SKNode {
     let maxProgressValue = CGFloat(100)
     private(set) var progressValue = CGFloat(0)
     
-    init(isAscending: Bool = false, size: CGSize) {
+    public init(isAscending: Bool = false, size: CGSize) {
         self.isAscending = isAscending
         self.size = size
         super.init()
@@ -103,7 +103,7 @@ class HorizontalProgressBar: SKNode {
         }
     }
     
-    func resizeBar() {
+    private func resizeBar() {
         let width = CGFloat(progressValue / maxProgressValue) * maxProgressWidth
         Task {
             await foregroundBar.run(
@@ -115,7 +115,7 @@ class HorizontalProgressBar: SKNode {
         }
     }
     
-    func updateBarState() {
+    public func updateBarState() {
         assert(foregroundBar != nil)
         updateProgressValue()
         resizeBar()
