@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "6685EADC-B8CF-4B5C-9B69-8CCA5823C486",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "HorizontalProgressBarTests",
+        "name" : "HorizontalProgressBarTests"
+      }
+    }
+  ],
+  "version" : 1
+}
