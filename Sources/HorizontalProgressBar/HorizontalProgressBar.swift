@@ -115,6 +115,10 @@ final public class HorizontalProgressBar: SKNode {
         }
     }
     
+    public func initializeBarValue() {
+        resizeBar()
+    }
+    
     public func updateBarState() {
         assert(foregroundBar != nil)
         updateProgressValue()
