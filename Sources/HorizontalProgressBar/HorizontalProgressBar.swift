@@ -71,7 +71,7 @@ final public class HorizontalProgressBar: SKNode {
         
         assert(foregroundBar != nil && backBar != nil)
         
-        backBar.position = CGPoint(x: viewBounds.width * 0.5, y: viewBounds.height * 0.5)
+//        backBar.position = CGPoint(x: viewBounds.width * 0.5, y: viewBounds.height * 0.5)
         foregroundBar.position = CGPoint(
             x: ((viewBounds.width - backBar.frame.width) / 2) + padding,
             y: backBar.position.y
