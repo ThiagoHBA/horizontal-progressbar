@@ -35,7 +35,7 @@ final public class HorizontalProgressBar: SKNode {
     public var padding: CGFloat = 10.0 { didSet { positionateBar() } }
     public var factor: CGFloat = CGFloat(10)
     public let maxProgressValue = CGFloat(100)
-    private(set) var progressValue = CGFloat(0)
+    public private(set) var progressValue = CGFloat(0)
     
     public init(isAscending: Bool = false, size: CGSize) {
         self.isAscending = isAscending
