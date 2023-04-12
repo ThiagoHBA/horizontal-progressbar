@@ -105,19 +105,19 @@ final class HorizontalProgressBarTests: XCTestCase {
     
     func test_setProgressValue_when_receive_value_should_set_correctly() {
         let sut = makeSUT()
-        sut.updateProgressValue(with: 10.0)
+        sut.updateBarState(with: 10.0)
         XCTAssertEqual(sut.progressValue, 10.0)
     }
     
     func test_setProgressValue_when_receive_values_more_than_max_should_set_correctly() {
         let sut = makeSUT()
-        sut.updateProgressValue(with: 500)
+        sut.updateBarState(with: 500)
         XCTAssertEqual(sut.progressValue, 100.0)
     }
     
     func test_setProgressValue_when_receive_values_more_than_zero_should_set_correctly() {
         let sut = makeSUT()
-        sut.updateProgressValue(with: -500)
+        sut.updateBarState(with: -500)
         XCTAssertEqual(sut.progressValue, 0)
     }
 }

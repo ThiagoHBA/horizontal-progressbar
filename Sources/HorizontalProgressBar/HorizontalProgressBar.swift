@@ -99,7 +99,7 @@ final public class HorizontalProgressBar: SKNode {
         }
     }
     
-    public func updateProgressValue(with value: CGFloat) {
+    private func updateProgressValue(with value: CGFloat) {
         if value < 0 {
             progressValue = 0
             return
@@ -130,6 +130,12 @@ final public class HorizontalProgressBar: SKNode {
     public func updateBarState() {
         assert(foregroundBar != nil)
         updateProgressValue()
+        resizeBar()
+    }
+    
+    public func updateBarState(with value: CGFloat) {
+        assert(foregroundBar != nil)
+        updateProgressValue(with: value)
         resizeBar()
     }
     
