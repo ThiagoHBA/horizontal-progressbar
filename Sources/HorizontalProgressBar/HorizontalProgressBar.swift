@@ -99,6 +99,18 @@ final public class HorizontalProgressBar: SKNode {
         }
     }
     
+    public func updateProgressValue(with value: CGFloat) {
+        if value < 0 {
+            progressValue = 0
+            return
+        }
+        if value > maxProgressValue {
+            progressValue = maxProgressValue
+            return
+        }
+        progressValue = value
+    }
+    
     private func resizeBar() {
         let width = CGFloat(progressValue / maxProgressValue) * maxProgressWidth
         Task {
